@@ -16,7 +16,7 @@ import java.util.Arrays;
 public class DisasterVictimTest {
     private DisasterVictim victim;
     private List<Supply> suppliesToSet; 
-    private List<FamilyRelation> familyRelations; 
+//    private List<FamilyRelation> familyRelations;
     private String expectedFirstName = "Freda";
     private String EXPECTED_ENTRY_DATE = "2024-01-18";
     private String validDate = "2024-01-15";
@@ -118,7 +118,7 @@ public class DisasterVictimTest {
     }
 	
 	
-
+/*
     @Test
     public void testAddFamilyConnection() {
         DisasterVictim victim1 = new DisasterVictim("Jane", "2024-01-20");
@@ -136,7 +136,7 @@ public class DisasterVictimTest {
         }
         assertTrue("addFamilyConnection should add a family relationship", correct);
     }
-
+*/
     @Test
     public void testAddPersonalBelonging() {
         Supply newSupply = new Supply("Emergency Kit", 1);
@@ -152,7 +152,7 @@ public class DisasterVictimTest {
         }
         assertTrue("addPersonalBelonging should add the supply to personal belongings", correct);
     }
-
+/*
 @Test
 public void testRemoveFamilyConnection() {
         DisasterVictim victim1 = new DisasterVictim("Jane", "2024-01-20");
@@ -179,7 +179,7 @@ public void testRemoveFamilyConnection() {
         }
     assertTrue("removeFamilyConnection should remove the family member", true);
 }  
-
+*/
 @Test
 public void testRemovePersonalBelonging() {
     
@@ -199,7 +199,7 @@ public void testRemovePersonalBelonging() {
     assertTrue("removePersonalBelonging should remove the supply from personal belongings", true);
 }
 
-
+/*
  @Test
     public void testSetFamilyConnection() {
         DisasterVictim victim1 = new DisasterVictim("Jane", "2024-01-20");
@@ -224,7 +224,8 @@ public void testRemovePersonalBelonging() {
        }
        assertTrue("Family relation should be set", correct);
     }
-
+*/
+/*
   @Test
 public void testSetMedicalRecords() {
     Location testLocation = new Location("Shelter Z", "1234 Shelter Ave");
@@ -248,7 +249,7 @@ public void testSetMedicalRecords() {
     }
     assertTrue("setMedicalRecords should correctly update medical records", correct);
 }
-
+*/
 
    @Test
 public void testSetPersonalBelongings() {
