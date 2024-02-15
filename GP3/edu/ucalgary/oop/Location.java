@@ -2,7 +2,7 @@ package edu.ucalgary.oop;
 import java.util.regex.*;
 
 
-public class location {
+public class Location {
     private String name;
     private String address;
     private DisasterVictim[] occupants;
@@ -10,7 +10,7 @@ public class location {
     
 
     //constructor
-    public location(String name, String address) {
+    public Location(String name, String address) {
         this.name = name;
         this.address = address;
     }
