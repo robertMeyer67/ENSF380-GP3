@@ -1,7 +1,6 @@
 package edu.ucalgary.oop;
 
 
-
 public class Location {
     private String name;
     private String address;
@@ -10,7 +9,7 @@ public class Location {
     
 
     //constructor
-    public Location(String name, String address) {
+    Location(String name, String address) {
         this.name = name;
         this.address = address;
     }

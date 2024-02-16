@@ -8,13 +8,12 @@ public class DisasterVictim {
     private String dateOfBirth;
     private String comments;
     private final int ASSIGNED_SOCIAL_ID;
-//    private MedicalRecord[] medicalRecords;
-//    private FamilyRelation[] familyConnections;
+    private MedicalRecord[] medicalRecords = new MedicalRecord[0];
+    private FamilyRelation[] familyConnections = new FamilyRelation[0];
     private final String ENTRY_DATE;
-    private Supply[] personalBelongings = new Supply[5];
+    private Supply[] personalBelongings = new Supply[0];
     private String gender;
     private static int counter;
-//    private static final String REGEX = "^(\\d{4})(\\d{2})(\\d{2})\\.(\\d{2})(\\d{2})(\\d{2}) User:(.{4}) Door:(.{3})$";
     private static final String REGEX = "^\\d{4}-\\d{2}-\\d{2}$";
 
     private static final Pattern PATTERN = Pattern.compile(REGEX);
@@ -49,9 +48,9 @@ public class DisasterVictim {
         return comments;
     }
 
-//    public MedicalRecord[] getMedicalRecords() {
-//        return medicalRecords;
-//    }
+    public MedicalRecord[] getMedicalRecords() {
+        return medicalRecords;
+    }
 
     public String getEntryDate() {
         return ENTRY_DATE;
@@ -65,9 +64,9 @@ public class DisasterVictim {
         return personalBelongings;
     }
 
-//    public FamilyRelation[] getFamilyConnections() {
-//        return familyConnections;
-//    }
+    public FamilyRelation[] getFamilyConnections() {
+        return familyConnections;
+    }
 
     public String getGender() {
         return gender;
@@ -97,17 +96,17 @@ public class DisasterVictim {
         this.comments = comments;
     }
 
-//    public void setMedicalRecords(MedicalRecord[] medicalRecords) {
-//        this.medicalRecords = medicalRecords;
-//    }
+    public void setMedicalRecords(MedicalRecord[] medicalRecords) {
+        this.medicalRecords = medicalRecords;
+    }
 
     public void setPersonalBelongings(Supply[] supplies) {
         this.personalBelongings = supplies;
     }
 
-//    public void setFamilyConnections(FamilyRelation[] relations) {
-//        this.familyConnections = relations;
-//    }
+    public void setFamilyConnections(FamilyRelation[] relations) {
+        this.familyConnections = relations;
+    }
 
     public void setGender(String gender) {
         this.gender = gender;
@@ -140,21 +139,25 @@ public class DisasterVictim {
             }
         }
     }
-    /*
+
     public void addFamilyConnection(FamilyRelation familyConnection) {
-        FamilyRelation[] temp = new FamilyRelation[personalBelongings.length + 1];
+        FamilyRelation[] temp = new FamilyRelation[familyConnections.length + 1];
         int i = 0;
-        for ( ; i < this.familyConnections.length; i++) {
+//        for ( ; i < this.familyConnections.length; i++) {
+//            temp[i] = this.familyConnections[i];
+//        }
+        while (i < this.familyConnections.length) {
             temp[i] = this.familyConnections[i];
+            i++;
         }
         temp[i] = familyConnection;
-        this.familyConnections; = temp;
+        this.familyConnections = temp;
     }
 
-    public void removeFamilyConnction(FamilyRelation familyConnection) {
+    public void removeFamilyConnection(FamilyRelation familyConnection) {
         for (int i = 0; i < this.familyConnections.length; i++) {
-            if (this.familyConnections[i] == supply) { //if the item is found
-                FamilyRelation[] temp = new FamilyRelation[familyConnection.length - 1];
+            if (this.familyConnections[i] == familyConnection) { //if the item is found
+                FamilyRelation[] temp = new FamilyRelation[familyConnections.length - 1];
                 int j = 0;
                 for ( ; j < i; j++) {
                     temp[j] = this.familyConnections[j];
@@ -164,7 +167,11 @@ public class DisasterVictim {
                         temp[j] = this.familyConnections[j+1];
                     }
                 }
-                this.familyConnections = temp;
+                if (temp == null) {
+                    this.familyConnections = new FamilyRelation[0];
+                } else {
+                    this.familyConnections = temp;
+                }
             }
         }
     }
@@ -179,6 +186,6 @@ public class DisasterVictim {
         this.medicalRecords = temp;
 
     }
-     */
+
 }
 

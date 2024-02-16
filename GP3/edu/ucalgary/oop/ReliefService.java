@@ -2,20 +2,20 @@ package edu.ucalgary.oop;
 
 public class ReliefService {
     
-    private Inquirer Inquirer;
+    private Inquirer inquirer;
     private DisasterVictim missingPerson;
     private Location lastKnownLocation;
     private String dateOfInquiry;
     private String infoProvided;
     
 
-    Public ReliefService(Inquirer Inquirer, DisasterVictim missingPerson,Location lastKnownLocation){
+    ReliefService(Inquirer inquirer, DisasterVictim missingPerson, String dateOfInquiry,String infoProvided, Location lastKnownLocation){
 
-        this.inquirer = Inquirer;
+        this.inquirer = inquirer;
         this.missingPerson = missingPerson;
         this.dateOfInquiry = dateOfInquiry;
         this.infoProvided = infoProvided;
-        this.lastKnownLocation = Location;
+        this.lastKnownLocation = lastKnownLocation;
         
     }
     public Inquirer getInquirer(){
@@ -25,7 +25,7 @@ public class ReliefService {
         return missingPerson;
     }
 
-    Public String getDateOfInquiry(){
+    public String getDateOfInquiry(){
         return dateOfInquiry;
     }
     
@@ -39,7 +39,7 @@ public class ReliefService {
         return lastKnownLocation;
     }
     public String getLogDetails(){
-        return "Inquirer:" + Inquirer.getName() + ", Missing Person:"+ missingPerson.getName() + ", Date Of Inquiry:"+ dateOfInquiry + ", Info Provided: " + infoProvided + ", Last Known Location: " + lastKnownLocation.getName();
+        return "Inquirer:" + this.inquirer.getFirstName() + " " + this.inquirer.getLastName() + ", Missing Person:"+ this.missingPerson.getFirstName() + " " + this.missingPerson.getLastName() + ", Date Of Inquiry:"+ this.dateOfInquiry + ", Info Provided: " + this.infoProvided + ", Last Known Location: " + this.lastKnownLocation.getName();
     }
 
 
