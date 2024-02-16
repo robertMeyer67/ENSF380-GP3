@@ -47,6 +47,6 @@ public class ReliefService {
         return lastKnownLocation;
     }
     public String getLogDetails(){
-        return "Inquirer:" + this.inquirer.getFirstName() + " " + this.inquirer.getLastName() + ", Missing Person:"+ this.missingPerson.getFirstName() + " " + this.missingPerson.getLastName() + ", Date Of Inquiry:"+ this.dateOfInquiry + ", Info Provided: " + this.infoProvided + ", Last Known Location: " + this.lastKnownLocation.getName();
+        return "Inquirer:" + this.inquirer.getFirstName() + ", Missing Person:"+ this.missingPerson.getFirstName() + " " + this.missingPerson.getLastName() + ", Date Of Inquiry: "+ this.dateOfInquiry + ", Info Provided: " + this.infoProvided + ", Last Known Location: " + this.lastKnownLocation.getName();
     }
 }
