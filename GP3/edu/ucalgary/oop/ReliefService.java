@@ -47,7 +47,6 @@ public class ReliefService {
         return lastKnownLocation;
     }
     public String getLogDetails(){
-// "Inquirer: John, Missing Person: Jane Alex, Date of Inquiry: 2024-02-10, Info Provided: Looking for family member, Last Known Location: University of Calgary";
         return "Inquirer: " + this.inquirer.getFirstName() + ", Missing Person: "+ this.missingPerson.getFirstName() + ", Date of Inquiry: "+ this.dateOfInquiry + ", Info Provided: " + this.infoProvided + ", Last Known Location: " + this.lastKnownLocation.getName();
     }
 }
